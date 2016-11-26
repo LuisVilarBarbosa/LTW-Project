@@ -1,0 +1,83 @@
+body {
+  background-color: white;
+  width: 1000px;
+  padding: 0px 10px 0px 10px;
+  margin: 50px auto;
+}
+
+nav{
+	border: 1px solid black;
+	height: 50px;
+	width: 490px;
+	padding-right: 30px;
+    text-align: -webkit-center;
+	background-color: white;
+	margin: 20px auto;
+	margin-top:250px;
+}
+
+nav ul{
+	list-style-type: none;
+}
+
+nav ul li{
+	width: fixed;
+	display: inline;
+	padding: 10px
+}
+
+nav ul li a:link{
+	text-decoration: none;
+	color: black;
+}
+
+nav ul li a:visited{
+	text-decoration: none;
+	color: #737373;
+}
+
+nav ul li a:hover{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav ul li a:active{
+	text-decoration: none;
+	color: red;
+}
+
+article{
+    border: 1px solid black;
+    width: 900px auto;
+    position:relative;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.banner{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin: 0px;
+    background-color: white;
+    border: 1px solid black;
+    height: auto;
+    text-align: left;
+    color:black;
+    z-index: 10; /* serve para definir qual é o que está à frente (tapar os detras) */
+}
+
+footer{
+    position: fixed;
+    bottom:0px;
+    left: -10px;
+    width: 100%;
+    margin: 0px;
+    background-color: white;
+    height: 35px;
+    text-align:-webkit-center;
+    color:darkgray;
+}
+
+
