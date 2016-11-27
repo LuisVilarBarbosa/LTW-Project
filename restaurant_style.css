@@ -1,3 +1,18 @@
+.banner{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin: 0px;
+    background-color: white;
+    border: 1px solid black;
+    height: auto;
+    text-align: left;
+	line-height: 10px;
+    color:black;
+    z-index: 10; /* serve para definir qual é o que está à frente (tapar os detras) */
+}
+
 body {
   background-color: white;
   width: 1000px;
@@ -13,7 +28,7 @@ nav{
     text-align: -webkit-center;
 	background-color: white;
 	margin: 20px auto;
-	margin-top:250px;
+	margin-top:170px;
 }
 
 nav ul{
@@ -46,7 +61,17 @@ nav ul li a:active{
 	color: red;
 }
 
+div{
+	display: inline;
+}
+
+section{
+	padding:20px;
+	display: inline;
+}
+
 article{
+    border-radius: 5px;
     border: 1px solid black;
     width: 900px auto;
     position:relative;
@@ -54,18 +79,14 @@ article{
     text-align: center;
 }
 
-.banner{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    margin: 0px;
-    background-color: white;
-    border: 1px solid black;
-    height: auto;
-    text-align: left;
-    color:black;
-    z-index: 10; /* serve para definir qual é o que está à frente (tapar os detras) */
+.comment *{
+	vertical-align: middle;
+}
+
+textarea {
+    width: 900px;
+    height: 150px;
+    border-radius: 10px;
 }
 
 footer{
@@ -80,4 +101,23 @@ footer{
     color:darkgray;
 }
 
-
+.rating {
+	vertical-align: middle;
+	display: inline-block;
+    border-radius: 10px;
+    border: 1px solid #cacaca;
+    padding: 16px;
+    width: 180px;
+    height: 20px;
+	line-height: 40px;
+}
+.ratings_stars {
+    background: url('resources/star_empty.png') no-repeat;
+    padding: 18px;
+}
+.ratings_vote {
+    background: url('resources/star_full.png') no-repeat;
+}
+.ratings_over {
+    background: url('resources/star_highlight.png') no-repeat;
+}
