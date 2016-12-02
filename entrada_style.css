@@ -1,0 +1,59 @@
+
+
+html{
+    padding: 0;
+    margin: 0;
+    background-color: #ddddff;
+}
+ img {
+  float: left;
+  margin-top: 100px;
+  margin-right:10px;
+  margin-bottom:5px;
+}
+
+#content  {
+  text-decoration:none;
+  background-color: #221f1f;
+  
+  display: inline;
+  margin-top:0px;
+  margin-bottom:5px;
+  list-style-type:none;
+   
+     
+ }
+
+ 
+
+ 
+ 
+ 
+
+.news-item{
+   margin-bottom:4px;
+    border-bottom-color:black;
+    border-bottom-style:solid;
+    padding-bottom:4px;
+   border-bottom-width:1px;
+    
+}
+
+
+section{
+	margin-top:100px;
+	padding:20px;
+	display: inline;
+}
+
+footer{
+    position: fixed;
+    bottom:0px;
+    left: -10px;
+    width: 100%;
+    margin: 0px;
+    background-color: white;
+    height: 35px;
+    text-align:-webkit-center;
+    color:darkgray;
+}
