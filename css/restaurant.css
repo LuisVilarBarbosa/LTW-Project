@@ -112,12 +112,12 @@ footer{
 	line-height: 40px;
 }
 .ratings_stars {
-    background: url('resources/star_empty.png') no-repeat;
+    background: url('../resources/star_empty.png') no-repeat;
     padding: 18px;
 }
 .ratings_vote {
-    background: url('resources/star_full.png') no-repeat;
+    background: url('../resources/star_full.png') no-repeat;
 }
 .ratings_over {
-    background: url('resources/star_highlight.png') no-repeat;
+    background: url('../resources/star_highlight.png') no-repeat;
 }

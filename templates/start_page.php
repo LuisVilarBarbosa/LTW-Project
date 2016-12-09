@@ -10,7 +10,7 @@
 		<meta name="description" content="Restaurants: Yelp like" />
 		<meta name="keywords" content="FEUP, LTW, Restaurants, Food" />
 		
-		<link rel="stylesheet" type="text/css" href="entrada_style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/start_page.css"/>
 	</head>
 
 	<body>

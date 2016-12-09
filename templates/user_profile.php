@@ -10,7 +10,7 @@
 		<meta name="description" content="Restaurants: Yelp like" />
 		<meta name="keywords" content="FEUP, LTW, Restaurants, Food" />
 		
-		<link rel="stylesheet" type="text/css" href="utilizador.css"
+		<link rel="stylesheet" type="text/css" href="../css/user_profile.css"
 		/>
 	</head>
 	
@@ -44,7 +44,7 @@
         <h2>Utilizador</h2>
 
         <div class="card">
-            <img src="images.jpg" alt="Avatar" style="width:100%" />
+            <img src="../resources/example_user.jpg" alt="Avatar" style="width:100%" />
             <div class="container">
                 <h4><b>John Doe</b></h4>
                 <p>Architect & Engineer</p>

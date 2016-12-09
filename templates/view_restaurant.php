@@ -10,8 +10,8 @@
 		<meta name="description" content="Restaurants: Yelp like" />
 		<meta name="keywords" content="FEUP, LTW, Restaurants, Food" />
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
-		<link rel="stylesheet" type="text/css" href="restaurant_style.css"/>
+		<script type="text/javascript" src="../javascript/view_restaurant.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/restaurant.css"/>
 	</head>
 
 	<body>
