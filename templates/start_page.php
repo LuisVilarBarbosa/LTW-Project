@@ -12,7 +12,9 @@
 		<meta name="description" content="Restaurants: Yelp like" />
 		<meta name="keywords" content="FEUP, LTW, Restaurants, Food" />
 		
-		<link rel="stylesheet" type="text/css" href="css/start_page.css"/>
+ 
+		<link rel="stylesheet" type="text/css" href="../css/start_page.css"/>
+
 	</head>
 
 	<body>
@@ -30,7 +32,7 @@
 					<label for="username">Nome de Utilizador:</label>
 					<input type="text" name="username" >
 					<label for="password">Palavra-passe:</label>
-					<input type="password"name="password" value=<?php getRestauranid(); ?>  > >
+					<input type="password"name="password"  >
                  <button type="submit" style="width:auto;">Entrar</button>
 				</form>
 				

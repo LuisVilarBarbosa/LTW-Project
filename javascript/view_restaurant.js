@@ -8,7 +8,7 @@ $(document).ready(function() {
 		// Handles the mouseout
 		function() {
 			$(this).prevAll().andSelf().removeClass('ratings_over');
-			set_votes($(this).parent());
+			//set_votes($(this).parent());
 		}
 	);
 });
