@@ -12,7 +12,7 @@
 		<meta name="description" content="Restaurants: Yelp like" />
 		<meta name="keywords" content="FEUP, LTW, Restaurants, Food" />
 		
-		<link rel="stylesheet" type="text/css" href="css/start_page.css"/>
+		<link rel="stylesheet" type="text/css" href="entrada_style.css"/>
 	</head>
 
 	<body>
@@ -30,7 +30,7 @@
 					<label for="username">Nome de Utilizador:</label>
 					<input type="text" name="username" >
 					<label for="password">Palavra-passe:</label>
-					<input type="password"name="password" value=<?php getRestauranid(); ?>  > >
+					<input type="password"name="password" >
                  <button type="submit" style="width:auto;">Entrar</button>
 				</form>
 				
@@ -42,19 +42,19 @@
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
-                <img src="resources/img1.jpeg" style="width:100%" />
+                <img src="img1.jpeg" style="width:100%" />
                 <div class="text">Tapas da Eira</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">2 / 3</div>
-                <img src="resources/img2.jpg" style="width:100%" />
+                <img src="img2.jpg" style="width:100%" />
                 <div class="text">Rio Este</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">3 / 3</div>
-                <img src="resources/img3.jpg" style="width:100%" />
+                <img src="img3.jpg" style="width:100%" />
                 <div class="text">Riça</div>
             </div>
 
@@ -97,9 +97,6 @@
 					</form>
         </div>
         </section>
-
-
-
         -->
 
        
@@ -173,5 +170,4 @@
 		</footer>
         -->
 
-	</body>
-</html>
+	
