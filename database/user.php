@@ -1,7 +1,11 @@
 <?php
-  function createUser($dbh, $name, $image_dir, $username, $password) {
+  function generatePasswordHash($password) {
     $options = ['cost' => 15];
-    $hash =  password_hash($password, PASSWORD_DEFAULT, $options);
+    return password_hash($password, PASSWORD_DEFAULT, $options);
+  }
+
+  function createUser($dbh, $name, $image_dir, $username, $password) {
+    $hash = generatePasswordHash($password);
 
     $stmt = $dbh->prepare('INSERT INTO users VALUES (?, ?, ?, ?)');
     $stmt->execute(array($name, $image_dir, $username, $hash));
@@ -19,12 +23,19 @@
     $stmt->execute(array($username));
     $users = $stmt->fetchAll();
 
-    for($user in $users)
-      if(password_verify($password, $user['password']) {
+    foreach($users as $user)
+      if(password_verify($password, $user['password'])) {
         $userId = $user['userId'];
         break;
       }
 
     return $userId;
+  }
+
+  function updateUser($dbh, $userId, $name, $image_dir, $username, $password) {
+    $hash = generatePasswordHash($password);
+
+    $stmt = $dbh->prepare('UPDATE users SET name = ?, image_dir = ?, username = ?, password = ? WHERE userId = ?');
+    $stmt->execute(array($name, $image_dir, $username, $hash, $userId));
   }
 ?>
