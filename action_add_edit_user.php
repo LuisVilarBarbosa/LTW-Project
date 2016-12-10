@@ -1,5 +1,4 @@
 <?php
-  include_once("config/init.php");
   include_once("database/user.php");
   include_once("load_image.php");
 
@@ -20,9 +19,9 @@
   }
   else {
     if(isset($_GET['userId']))
-      updateUser($dbh, $_GET['userId'], $name, $image_dir, $username, $password);
+      updateUser($_GET['userId'], $name, $image_dir, $username, $password);
     else
-      createUser($dbh, $name, $image_dir, $username, $password);
+      createUser($name, $image_dir, $username, $password);
   }
 
   //header('Location: ');

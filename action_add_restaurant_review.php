@@ -1,5 +1,4 @@
 <?php
-  include_once("config/init.php");
   include_once("database/restaurantReview.php");
 
   $userId = $_SESSION['userId'];
@@ -10,7 +9,7 @@
   if($comment == '')
     $comment = NULL;
 
-  createRestaurantReview($dbh, $userId, $restaurantId, $comment, $score);
+  createRestaurantReview($userId, $restaurantId, $comment, $score);
 
   //header('Location: ');
 ?>
