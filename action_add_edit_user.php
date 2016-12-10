@@ -18,8 +18,8 @@
       echo $e . '<br>';
   }
   else {
-    if(isset($_GET['userId']))
-      updateUser($_GET['userId'], $name, $image_dir, $username, $password);
+    if(isset($_SESSION['userId']))
+      updateUser($_SESSION['userId'], $name, $image_dir, $username, $password);
     else
       createUser($name, $image_dir, $username, $password);
   }

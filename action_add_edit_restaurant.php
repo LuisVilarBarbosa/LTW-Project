@@ -15,7 +15,7 @@
   if ($image_url == '' && $image_file['name'] == '') array_push($errors, 'Image URL or image file is mandatory.');
   if ($image_url != '' && $image_file['name'] != '') array_push($errors, 'Only one field must be filled (image URL or image file).');
   if ($address == '') array_push($errors, 'Address is mandatory.');
-  if (!isset($_GET['ownerId'])) array_push($errors, 'ownerId not set.');
+  if (!isset($_SESSION['userId'])) array_push($errors, 'userId not set.'); // if the page is well done, must never be true
 
   if (sizeof($errors) != 0) {
     foreach($errors as $e)
@@ -34,13 +34,13 @@
 
     try {
       if ($image_url != '')
-        add_edit_restaurant($restaurantId, $name, $description, $image_url, $address, $_GET['ownerId']);
+        add_edit_restaurant($restaurantId, $name, $description, $image_url, $address, $_SESSION['userId']);
       else if ($image_file['name'] != '') {
         $target_dir = load_image($image_file);
         if($target_dir === false)
           echo 'File is not an image.<br>';
         else
-          add_edit_restaurant($restaurantId, $name, $description, $target_dir, $address, $_GET['ownerId']);
+          add_edit_restaurant($restaurantId, $name, $description, $target_dir, $address, $_SESSION['userId']);
       }
       else
         echo 'Error choosing image type to add restaurant to database.<br>';

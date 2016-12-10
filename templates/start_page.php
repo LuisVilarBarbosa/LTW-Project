@@ -27,7 +27,7 @@
 		<div id="log_in">
 			<div class="news-item">
 				
-				 <form action="......................" method="get"> 
+				 <form action="......................" method="post"> 
 
 					<label for="username">Nome de Utilizador:</label>
 					<input type="text" name="username" >
@@ -108,7 +108,7 @@
 
         <div id="id01" class="modal">
 
-            <form class="modal-content animate" action="action_page.php">
+            <form class="modal-content animate" action="action_page.php" method="post">
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <img src="images.jpg" alt="Avatar" class="avatar" />

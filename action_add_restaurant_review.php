@@ -2,7 +2,7 @@
   include_once("database/restaurantReview.php");
 
   $userId = $_SESSION['userId'];
-  $restaurantId = load_image($_POST['restaurantId']);
+  $restaurantId = $_GET['restaurantId']);
   $comment = trim(strip_tags($_POST['comment']));
   $score = $_POST['score'];
 
