@@ -1,5 +1,4 @@
 ﻿<?php
-  include_once('database/init.php');
   include_once('database/restaurant.php');
   include_once('load_image.php');
 
@@ -8,6 +7,7 @@
   $image_url = trim($_POST['image_url']);
   $image_file = $_FILES['image_file'];
   $address = trim($_POST['address']);
+  $restaurantId = $_GET['restaurantId'] || NULL;
 
   $errors = array();
   if ($name == '') array_push($errors, 'Name is mandatory.');
@@ -23,24 +23,24 @@
   }
   else {
 
-    function add_edit_restaurant($image_dir) {
-      if(isset($_GET['restaurantId']))
-        updateRestaurant($dbh, $_GET['restaurantId'], $name, $description, $image_dir, $address, $_GET['ownerId']);
+    function add_edit_restaurant($restaurantId, $name, $description, $image_dir, $address, $ownerId) {
+      if($restaurantId != NULL)
+        updateRestaurant($restaurantId, $name, $description, $image_dir, $address, $ownerId);
       else {
-        addRestaurant($dbh, $name, $description, $image_url, $address, $_GET['ownerId']);
-        $_GET['restaurantId'] = getRestaurantId($dbh, $name, $description, $image_dir, $address, $_GET['ownerId']);
+        createRestaurant($name, $description, $image_dir, $address, $ownerId);
+        $_GET['restaurantId'] = getRestaurantId($name, $description, $image_dir, $address, $ownerId);
       }
     }
 
     try {
       if ($image_url != '')
-        add_edit_restaurant($image_url);
+        add_edit_restaurant($restaurantId, $name, $description, $image_url, $address, $_GET['ownerId']);
       else if ($image_file['name'] != '') {
         $target_dir = load_image($image_file);
         if($target_dir === false)
           echo 'File is not an image.<br>';
         else
-          add_edit_restaurant($target_dir);
+          add_edit_restaurant($restaurantId, $name, $description, $target_dir, $address, $_GET['ownerId']);
       }
       else
         echo 'Error choosing image type to add restaurant to database.<br>';
