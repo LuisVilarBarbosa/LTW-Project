@@ -1,4 +1,4 @@
-<form action="action_add_restaurant.php" method="post" method="multipart/form-data">
+<form action="action_add_edit_restaurant.php" method="post" method="multipart/form-data">
   <label for="name">Name: </label>
   <input type="text" name="name"><br><br>
   <label for="description">Description: </label>
