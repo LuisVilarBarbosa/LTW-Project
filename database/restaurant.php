@@ -15,4 +15,9 @@
     $stmt->execute(array($ownerId));
     return $stmt->fetchAll();
   }
+
+  function updateRestaurant($dbh, $restaurantId, $name, $description, $image_dir, $address, $ownerId) {
+    $stmt = $dbh->prepare('UPDATE restaurants SET name = ?, description = ?, image_dir = ?, address = ?, ownerId = ? WHERE restaurantId = ?');
+    $stmt->execute(array($name, $description, $image_dir, $address, $ownerId, $restaurantId));
+  }
 ?>
