@@ -9,5 +9,5 @@
     $_SESSION['userId'] = $userId;
   }
 
-  //header('Location: ');  
+  header('Location: user_profile.php?id=" . $userId');  
 ?>

@@ -5,42 +5,22 @@
 
 
    
-	<head>
-		<title>Restaurant Advisor</title>
-		<meta charset="UTF-8">
-		<meta name="author" name="Diogo Cruz, Lu�s Barbosa, Rui Ara�jo" />
-		<meta name="description" content="Restaurants: Yelp like" />
-		<meta name="keywords" content="FEUP, LTW, Restaurants, Food" />
+	
 		
- 
-		<link rel="stylesheet" type="text/css" href="../css/start_page.css"/>
-
+		<link rel="stylesheet" type="text/css" href="css/start_page.css"/>
+		
 	</head>
-
-	<body>
-		<header class="banner">
-			<h1>Restaurant Advisor</h1>
-		</header>
+	
+	<!--   <script type="text/javascript" src="../javascript/slideshow.js"></script>  -->
+	
 
         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Registar</button>
 		
-		<div id="log_in">
-			<div class="news-item">
-				
-				 <form action="......................" method="post"> 
-
-					<label for="username">Nome de Utilizador:</label>
-					<input type="text" name="username" >
-					<label for="password">Palavra-passe:</label>
-					<input type="password"name="password"  >
-                 <button type="submit" style="width:auto;">Entrar</button>
-				</form>
-				
-			</div>
-			</div>
+		
             
 		<br />
         <br />
+
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
@@ -99,19 +79,16 @@
 					</form>
         </div>
         </section>
-
-
-
         -->
 
        
 
         <div id="id01" class="modal">
 
-            <form class="modal-content animate" action="action_page.php" method="post">
+            <form class="modal-content animate" action="action_add_edit_user.php">
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="images.jpg" alt="Avatar" class="avatar" />
+                    <img src="resources/example_user.jpg" alt="Avatar" class="avatar" />
                 </div>
 
                 <div class="container">
@@ -121,7 +98,15 @@
                     <label><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="psw" required=required />
 
-                    <button type="submit">Login</button>
+					<label><b>Nome</b></label>
+                    <input type="text" placeholder="Enter Name" name="name" required=required />
+
+					<label><b>Imagem</b></label>
+                    <input type="text" placeholder="Enter image URL" name="image" required=required />
+
+					
+
+                    <button type="submit">Registar</button>
                    
                 </div>
 
@@ -132,6 +117,8 @@
             </form>
         </div>
 
+		
+		<script src="javascript/slideshow.js"></script>
 
 
         <script>
@@ -155,6 +142,7 @@
         setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
         </script>
+	
 
         <script>
     // Get the modal
@@ -168,12 +156,6 @@
     }
         </script>
 
-    <!--
-		<footer>
-			<p>Made by: document.getElementsByTagName("author")</p>
-			<p>Made by: Diogo Cruz, Lu�s Barbosa, Rui Ara�jo</p>
-		</footer>
-        -->
+   
 
-	</body>
-</html>
+	

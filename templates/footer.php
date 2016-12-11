@@ -1,8 +1,8 @@
 ﻿
    
         <footer>
-            <p>Made by: document.getElementsByTagName("author")</p>
-            <p>Made by: Diogo Cruz, Lu�s Barbosa, Rui Ara�jo</p>
+           
+            <p>Made by: Diogo Cruz, Luis Barbosa, Rui Araujo</p>
         </footer>
     
 </body>
