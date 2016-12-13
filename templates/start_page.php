@@ -54,7 +54,7 @@
 </section>
 -->
 <div id="id01" class="modal">
-    <form class="modal-content animate" action="action_add_edit_user.php" method="post">
+    <form class="modal-content animate" action="action_add_edit_user.php" method="post" enctype="multipart/form-data">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="resources/example_user.jpg" alt="Avatar" class="avatar" />
