@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html
+<!DOCTYPE html
           PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -61,13 +61,13 @@
         </div>
         <div class="container">
             <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required=required />
+            <input type="text" placeholder="Enter Username" name="username" required="required" />
             <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required=required />
+            <input type="password" placeholder="Enter Password" name="password" required="required" />
             <label><b>Nome</b></label>
-            <input type="text" placeholder="Enter Name" name="name" required=required />
+            <input type="text" placeholder="Enter Name" name="name" required="required" />
             <label><b>Imagem</b></label>
-            <input type="text" placeholder="Enter image URL" name="image" required=required />
+            <input type="file" placeholder="Enter image" name="image" required="required" />
             <button type="submit">Registar</button>
         </div>
         <div class="container" style="background-color:#f1f1f1">
