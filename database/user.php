@@ -10,7 +10,7 @@
     global $dbh;
     $hash = generatePasswordHash($password);
 
-    $stmt = $dbh->prepare('INSERT INTO users VALUES (?, ?, ?, ?)');
+      $stmt = $dbh->prepare('INSERT INTO users (name, image_dir, username, password) VALUES (?, ?, ?, ?)');
     $stmt->execute(array($name, $image_dir, $username, $hash));
   }
 
