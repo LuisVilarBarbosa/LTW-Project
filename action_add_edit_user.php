@@ -20,9 +20,9 @@
   else {
     if(isset($_SESSION['userId']))
       updateUser($_SESSION['userId'], $name, $image_dir, $username, $password);
-    else
+    else {
       createUser($name, $image_dir, $username, $password);
+      header('Location: action_login.php');
+    }
   }
-
-  //header('Location: ');
 ?>
