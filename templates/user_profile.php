@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <link rel="stylesheet" type="text/css" href="css/start_page.css" />
 <div id="id01" class="modal">
-    <form class="modal-content animate" action="action_add_edit_user.php">
+    <form class="modal-content animate" action="action_add_edit_user.php" method="post">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="resources/example_user.jpg" alt="Avatar" class="avatar" />
@@ -13,7 +13,7 @@
             <label><b>Username</b></label>
             <input type="text" placeholder="funcao que vai buscar o username" name="uname" required=required />
             <label><b>Password</b></label>
-            <input type="password" placeholder="func que vai buscar a password ="psw" required=required />
+            <input type="password" placeholder="func que vai buscar a password = psw" required=required />
             <label><b>Nome</b></label>
             <input type="text" placeholder="func que vai buscar o nome" required=required />
             <label><b>Imagem</b></label>
@@ -26,7 +26,7 @@
     </form>
 </div>
 <div id="id02" class="modal">
-    <form class="modal-content animate" action="action_add_edit_restaurant.php">
+    <form class="modal-content animate" action="action_add_edit_restaurant.php" method="post">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
         </div>

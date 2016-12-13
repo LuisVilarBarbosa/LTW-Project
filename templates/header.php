@@ -10,7 +10,7 @@
       </header>
       <div id="log_in">
         <div class="news-item">
-          <form action="action_login.php" method="get">
+          <form action="action_login.php" method="post">
             <label>
               <b>Username</b>
             </label>
