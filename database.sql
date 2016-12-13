@@ -11,7 +11,7 @@ CREATE TABLE users(
 	userId		INTEGER	PRIMARY KEY AUTOINCREMENT,
 	name 		TEXT,
 	image_dir	TEXT,
-	user		TEXT	NOT NULL UNIQUE,
+	username		TEXT	NOT NULL UNIQUE,
 	password	TEXT	NOT NULL);
 
 CREATE TABLE restaurantReviews(

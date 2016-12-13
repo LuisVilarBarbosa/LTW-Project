@@ -7,7 +7,8 @@
   if (verifyUser($username, $password)) {
     $userId = getUserId($username, $password);
     $_SESSION['userId'] = $userId;
+    header('Location: user_profile.php?id=' . $userId);
   }
-
-  header('Location: user_profile.php?id=" . $userId');  
+  else
+    echo 'Invalid credentials.<br>';
 ?>
