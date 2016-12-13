@@ -9,7 +9,7 @@
 
   $errors = array();
   if($name == '') array_push($errors, 'A name must be indicated.');
-  if($image_dir == '') array_push($errors, 'An image must be indicated.');
+  if($image_dir == NULL) array_push($errors, 'File is not an image. / An image must be indicated.');
   if($username == '') array_push($errors, 'An username must be indicated.');
   if($password == '') array_push($errors, 'A password must be indicated.');
 

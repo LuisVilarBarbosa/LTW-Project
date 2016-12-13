@@ -9,7 +9,7 @@
       if(!move_uploaded_file($image['tmp_name'], $target_file))
         die('Error storing image.');
     } else
-      die('Not an image.');
+      return NULL;
 
     return $target_file;
   }

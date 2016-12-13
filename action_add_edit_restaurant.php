@@ -36,8 +36,8 @@
       if ($image_url != '')
         add_edit_restaurant($restaurantId, $name, $description, $image_url, $address, $_SESSION['userId']);
       else if ($image_file['name'] != '') {
-        $target_dir = load_image($image_file);
-        if($target_dir === false)
+        $imege_dir = load_image($image_file);
+        if($imege_dir == NULL)
           echo 'File is not an image.<br>';
         else
           add_edit_restaurant($restaurantId, $name, $description, $target_dir, $address, $_SESSION['userId']);
