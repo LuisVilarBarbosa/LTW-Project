@@ -24,4 +24,12 @@
     $stmt = $dbh->prepare('UPDATE restaurants SET name = ?, description = ?, image_dir = ?, address = ?, ownerId = ? WHERE restaurantId = ?');
     $stmt->execute(array($name, $description, $image_dir, $address, $ownerId, $restaurantId));
   }
+
+  function searchRestaurants($partialName) {
+    global $dbh;
+    $stmt = $dbh->prepare('SELECT * FROM restaurants WHERE name LIKE ?');
+    $stmt->execute($partialName);
+    return $stmt->fetchAll();
+  }
+
 ?>
