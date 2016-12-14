@@ -32,7 +32,10 @@
       try {
         createUser($name, $image_dir, $username, $password);
       } catch(PDOException $e) {
-        array_push($_SESSION['error_messages'], $e->getMessage());
+        if($e->getCode() == 23000)
+          array_push($_SESSION['error_messages'], 'Existing username. Try another.');
+        else
+          array_push($_SESSION['error_messages'], $e->getMessage());
       }
       header('Location: action_login.php');
     }
