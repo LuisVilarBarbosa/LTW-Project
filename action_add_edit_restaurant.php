@@ -15,7 +15,6 @@
   if ($image_url == '' && $image_file['name'] == '') array_push($_SESSION['error_messages'], 'Image URL or image file is mandatory.');
   if ($image_url != '' && $image_file['name'] != '') array_push($_SESSION['error_messages'], 'Only one field must be filled (image URL or image file).');
   if ($address == '') array_push($_SESSION['error_messages'], 'Address is mandatory.');
-  if (!isset($_SESSION['userId'])) array_push($errors, 'userId not set.'); // if the page is well done, must never be true
 
   if (sizeof($_SESSION['error_messages']) != 0) {
     header('Location: add_edit_restaurant.php');
