@@ -42,4 +42,10 @@
     $stmt = $dbh->prepare('UPDATE users SET name = ?, image_dir = ?, username = ?, password = ? WHERE userId = ?');
     $stmt->execute(array($name, $image_dir, $username, $hash, $userId));
   }
+
+  function getUserById($userId) {
+    $stmt = $dbh->prepare('SELECT name, image_dir, username FROM users WHERE userId = ?');
+    $stmt->execute(array($userId));
+    return $stmt->fetch();
+  }
 ?>
