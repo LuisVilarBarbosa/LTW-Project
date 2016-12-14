@@ -8,9 +8,7 @@
 <body>
 	<header class="banner">
 		<h1>Restaurant Advisor</h1>
-	</header>
-	<div id="log_in">
-		<div class="news-item">
+		<div id="log_in" class="news-item">
 			<form action="action_login.php" method="post">
 				<label><b>Username</b></label>
 				<input type="text" placeholder="Enter Username" name="username" required="required" />
@@ -19,5 +17,5 @@
 				<button type="submit">Entrar</button>
 			</form>
 		</div>
-	</div>
+	</header>
 </body>

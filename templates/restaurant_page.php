@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="banner">
+    <header class="temp">
         <h1>Restaurant Advisor</h1>
         <h1>Nome_restaurante</h1>
         <h2>Avaliação: "getAvaliation(Nome_restaurante)" <div class="total_votes">vote data</div></h2>

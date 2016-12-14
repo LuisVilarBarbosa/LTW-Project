@@ -2,6 +2,6 @@
 	include('config/init.php');
 
 	include('templates/header.php');
-	include('templates/view_restaurant.php');
+	include('templates/restaurant_page.php');
 	include('templates/footer.php');
 ?>
