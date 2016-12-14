@@ -16,5 +16,5 @@
     array_push($_SESSION['error_messages'], $e->getMessage());
   }
 
-  header('Location: view_restaurant.php?id=' . $restaurantId);
+  header('Location: restaurant_page.php?id=' . $restaurantId);
 ?>

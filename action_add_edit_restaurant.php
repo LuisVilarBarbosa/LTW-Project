@@ -50,6 +50,6 @@
     if (sizeof($_SESSION['error_messages']) != 0)
       header('Location: add_edit_restaurant.php');
     else
-      header('Location: view_restaurant.php?id=' . $_GET['restaurantId']);
+      header('Location: restaurant_page.php?id=' . $_GET['restaurantId']);
   }
 ?>
