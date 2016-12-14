@@ -10,6 +10,8 @@
     $_SESSION['userId'] = $userId;
     header('Location: user_profile.php?id=' . $userId);
   }
-  else
-    echo 'Invalid credentials.<br>';
+  else {
+    array_push($_SESSION['error_messages'], 'Invalid credentials.');
+    header('Location: start_page.php');
+  }
 ?>
