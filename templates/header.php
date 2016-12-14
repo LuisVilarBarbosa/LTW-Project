@@ -1,4 +1,5 @@
-﻿<head>
+<!DOCTYPE html>
+<head>
 	<title>Restaurant Advisor</title>
 	<meta charset="UTF-8">
 	<meta name="author" name="Diogo Cruz, Luis Barbosa, Rui Araujo" />
@@ -6,18 +7,24 @@
 	<meta name="keywords" content="FEUP, LTW, Restaurants, Food" />
 </head>
 <body>
-	<header class="banner">
+	<header>
 		<h1>Restaurant Advisor</h1>
 	</header>
-	<div id="log_in">
-		<div class="news-item">
+
+	<!-- Show errors -->
+	<section id="errors">
+			<?php foreach($error_messages as $error) {?>
+				<label><?=$error?></label>
+				<br />
+			<?php } ?>
+	</section>
+
+	<section id="log_in">
 			<form action="action_login.php" method="post">
 				<label><b>Username</b></label>
-				<input type="text" placeholder="Enter Username" name="username" required="required" />
+				<input type="text" placeholder="Enter username" name="username" required="required" />
 				<label><b>Password</b></label>
-				<input type="password" placeholder="Enter Password" name="password" required="required" />
-				<button type="submit">Entrar</button>
+				<input type="password" placeholder="Enter password" name="password" required="required" />
+				<button type="submit">Sign in</button>
 			</form>
-		</div>
-	</div>
-</body>
+	</section>
