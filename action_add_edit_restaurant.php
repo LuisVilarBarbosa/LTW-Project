@@ -35,11 +35,11 @@
       if ($image_url != '')
         add_edit_restaurant($restaurantId, $name, $description, $image_url, $address, $_SESSION['userId']);
       else if ($image_file['name'] != '') {
-        $imege_dir = load_image($image_file);
-        if ($imege_dir == NULL)
+        $image_dir = load_image($image_file);
+        if ($image_dir == NULL)
           array_push($_SESSION['error_messages'], 'File is not an image.');
         else
-          add_edit_restaurant($restaurantId, $name, $description, $target_dir, $address, $_SESSION['userId']);
+          add_edit_restaurant($restaurantId, $name, $description, $image_dir, $address, $_SESSION['userId']);
       }
       else
         array_push($_SESSION['error_messages'], 'Error choosing image type to add restaurant to database.');
