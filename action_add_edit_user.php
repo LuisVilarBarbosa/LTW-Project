@@ -21,11 +21,19 @@
   }
   else {
     if(isset($_SESSION['userId'])) {
-      updateUser($_SESSION['userId'], $name, $image_dir, $username, $password);
+      try {
+        updateUser($_SESSION['userId'], $name, $image_dir, $username, $password);
+      } catch(PDOException $e) {
+        array_push($_SESSION['error_messages'], $e->getMessage());
+      }
       header('Location: user_profile.php');
     }
     else {
-      createUser($name, $image_dir, $username, $password);
+      try {
+        createUser($name, $image_dir, $username, $password);
+      } catch(PDOException $e) {
+        array_push($_SESSION['error_messages'], $e->getMessage());
+      }
       header('Location: action_login.php');
     }
   }

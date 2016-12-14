@@ -10,7 +10,11 @@
   if($comment == '')
     $comment = NULL;
 
-  createRestaurantReview($userId, $restaurantId, $comment, $score);
+  try {
+    createRestaurantReview($userId, $restaurantId, $comment, $score);
+  } catch (PDOException $e) {
+    array_push($_SESSION['error_messages'], $e->getMessage());
+  }
 
-  //header('Location: ');
+  header('Location: view_restaurant.php?id=' . $restaurantId);
 ?>
