@@ -11,21 +11,13 @@
         </div>
         <div class="container">
             <label><b>Username</b></label>
-            <input type="text" placeholder="<?php  user = getUsersById($_SESSION['userId0]);
-			echo $user['username'];
-			?>" name="uname" required=required />
+            <input type="text" placeholder="stuff" name="username" required=required />
             <label><b>Password</b></label>
-            <input type="password" placeholder="<?php  user = getUsersById($_SESSION['userId0]);
-			echo $user['password'];
-			?>" required=required />
+            <input type="password" placeholder="stuff" name="password" required=required />
             <label><b>Nome</b></label>
-            <input type="text" placeholder="<?php  user = getUsersById($_SESSION['userId0]);
-			echo $user['name'];
-			?>" required=required />
+            <input type="text" placeholder="   some stuff" name ="name" required=required />
             <label><b>Imagem</b></label>
-            <input type="text" placeholder="<?php  user = getUsersById($_SESSION['userId0]);
-			echo $user['image_dir'];
-			?>" name="image" required=required />
+            <input type="text" placeholder="imagem " name="image" required=required />
             <button type="submit">Alterar</button>
         </div>
         <div class="container" style="background-color:#f1f1f1">
@@ -56,27 +48,11 @@
 <input type="text" name="search" placeholder="Search.." />
 <h2>Utilizador</h2>
 <div class="card">
-    <img src="<?php  user = getUsersById($_SESSION['userId0]);
-			echo $user['image_dir'];
-			?>" alt="Avatar" style="width:100%" />
+    <img src="../resources/example_user.jpg" alt="Avatar" style="width:100%" />
     <div class="container">
 
-
-  $user = getUsersById($_SESSION['userId0]);
-   e acedes ao que queres, por exemplo, $user['name'].
-
-
-
-        <h4><b>GetNome    <?php  user = getUsersById($_SESSION['userId0]);
-			echo $user['name'];
-			?>
-		
-		          </b></h4>
-        <p>get username
-						<?php  user = getUsersById($_SESSION['userId0]);
-			echo $user['username'];
-			?>
-		</p>
+        <h4><b>GetNome   </b></h4>
+        <p>get username</p>
     </div>
 </div>
 <br />
