@@ -11,13 +11,21 @@
         </div>
         <div class="container">
             <label><b>Username</b></label>
-            <input type="text" placeholder="funcao que vai buscar o username" name="uname" required=required />
+            <input type="text" placeholder="<?php  user = getUsersById($_SESSION['userId0]);
+			echo $user['username'];
+			?>" name="uname" required=required />
             <label><b>Password</b></label>
-            <input type="password" placeholder="func que vai buscar a password = psw" required=required />
+            <input type="password" placeholder="<?php  user = getUsersById($_SESSION['userId0]);
+			echo $user['password'];
+			?>" required=required />
             <label><b>Nome</b></label>
-            <input type="text" placeholder="func que vai buscar o nome" required=required />
+            <input type="text" placeholder="<?php  user = getUsersById($_SESSION['userId0]);
+			echo $user['name'];
+			?>" required=required />
             <label><b>Imagem</b></label>
-            <input type="text" placeholder="func que vai buscar image" name="image" required=required />
+            <input type="text" placeholder="<?php  user = getUsersById($_SESSION['userId0]);
+			echo $user['image_dir'];
+			?>" name="image" required=required />
             <button type="submit">Alterar</button>
         </div>
         <div class="container" style="background-color:#f1f1f1">
@@ -48,15 +56,32 @@
 <input type="text" name="search" placeholder="Search.." />
 <h2>Utilizador</h2>
 <div class="card">
-    <img src="resources/example_user.jpg" alt="Avatar" style="width:100%" />
+    <img src="<?php  user = getUsersById($_SESSION['userId0]);
+			echo $user['image_dir'];
+			?>" alt="Avatar" style="width:100%" />
     <div class="container">
-        <h4><b>GetNome</b></h4>
-        <p>get username</p>
+
+
+  $user = getUsersById($_SESSION['userId0]);
+   e acedes ao que queres, por exemplo, $user['name'].
+
+
+
+        <h4><b>GetNome    <?php  user = getUsersById($_SESSION['userId0]);
+			echo $user['name'];
+			?>
+		
+		          </b></h4>
+        <p>get username
+						<?php  user = getUsersById($_SESSION['userId0]);
+			echo $user['username'];
+			?>
+		</p>
     </div>
 </div>
 <br />
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Editar Utilizador</button>
-<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Adicionar Restaurante</button>
+<button onclick="document.getElementById('id01').style.display='block'" >Editar Utilizador</button>
+<button onclick="document.getElementById('id02').style.display='block'" >Adicionar Restaurante</button>
 <br />
 <br />
 <ul class="tab">
