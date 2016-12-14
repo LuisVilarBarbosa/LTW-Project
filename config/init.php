@@ -11,6 +11,6 @@
      $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
      $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch (PDOException $e) {
-     die($e->getMessage());
+     array_push($_SESSION['error_messages'], $e->getMessage());
   }
 ?>
