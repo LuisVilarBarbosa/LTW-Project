@@ -1,6 +1,4 @@
 <?php
-  include_once('config/init.php');
-
   function generatePasswordHash($password) {
     $options = ['cost' => 15];
     return password_hash($password, PASSWORD_DEFAULT, $options);

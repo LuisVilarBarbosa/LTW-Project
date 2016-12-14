@@ -1,5 +1,7 @@
 <?php
-  include_once('templates/header.php');
-  include_once('templates/start_page.php');
-  include_once('templates/footer.php');
+  include('config/init.php');
+
+  include('templates/header.php');
+  include('templates/start_page.php');
+  include('templates/footer.php');
 ?>

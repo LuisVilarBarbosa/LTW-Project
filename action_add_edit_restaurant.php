@@ -1,6 +1,7 @@
 ﻿<?php
-  include_once('database/restaurant.php');
-  include_once('load_image.php');
+  include('config/init.php');
+  include('database/restaurant.php');
+  include('load_image.php');
 
   $name = trim($_POST['name']);
   $description = trim($_POST['description']);

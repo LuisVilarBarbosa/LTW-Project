@@ -1,5 +1,6 @@
 <?php
-  include_once("database/restaurantReview.php");
+  include('config/init.php');
+  include('database/restaurantReview.php');
 
   $userId = $_SESSION['userId'];
   $restaurantId = $_GET['restaurantId']);

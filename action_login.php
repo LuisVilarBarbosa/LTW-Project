@@ -1,5 +1,6 @@
 <?php
-  include_once('database/user.php');
+  include('config/init.php');
+  include('database/user.php');
 
   $username = trim(strip_tags($_POST['username']));
   $password = $_POST['password'];

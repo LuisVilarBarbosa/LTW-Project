@@ -1,6 +1,7 @@
 <?php
-  include_once("database/user.php");
-  include_once("load_image.php");
+  include('config/init.php');
+  include('database/user.php');
+  include('load_image.php');
 
   $name = trim(strip_tags($_POST['name']));
   $image_dir = load_image($_FILES['image']);

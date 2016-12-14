@@ -1,6 +1,4 @@
 <?php
-  include_once('config/init.php');
-
   function createRestaurantReview($userId, $restaurantId, $comment, $score) {
     global $dbh;
     $stmt = $dbh->prepare('INSERT INTO restaurantReviews (userId, restaurantId, comment, score) VALUES (?, ?, ?, ?)');

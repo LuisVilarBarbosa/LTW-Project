@@ -1,6 +1,4 @@
 <?php
-  include_once('config/init.php');
-
   function createRestaurant($name, $description, $image_dir, $address, $ownerId) {
     global $dbh;
     $stmt = $dbh->prepare('INSERT INTO restaurants (name, description, image_dir, address, ownerId) VALUES (?, ?, ?, ?, ?)');
