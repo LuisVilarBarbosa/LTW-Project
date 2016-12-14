@@ -1,4 +1,6 @@
 <?php
+  session_start();
+
   try {
      $dbh = new PDO('sqlite:database.db');
      $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
