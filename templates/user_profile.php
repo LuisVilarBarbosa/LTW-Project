@@ -6,13 +6,13 @@
         </div>
         <div class="container">
             <label><b>Username</b></label>
-            <input type="text" placeholder=<?=$user['name']?> name="username" required="required "/>
+            <input type="text" name="username" value=<?=$user['name']?> required="required "/>
             <label><b>Password</b></label>
-            <input type="password" placeholder="nova password" name="password" required="required" />
+            <input type="password" placeholder="New password" name="password" required="required" />
             <label><b>Nome</b></label>
-            <input type="text" placeholder=<?=$user['name']?> name ="name" required="required" />
+            <input type="text" name ="name" value=<?=$user['name']?> required="required" />
             <label><b>Imagem</b></label>
-            <input type="file" placeholder="Enter image" name="image" required="required" />
+            <input type="file" name="image" required="required" />
             <button type="submit">Alterar</button>
         </div>
         <div class="container" style="background-color:#f1f1f1">
