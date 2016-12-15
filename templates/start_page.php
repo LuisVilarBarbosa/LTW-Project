@@ -19,33 +19,13 @@
     </div>
 </div>
 <br />
+
 <div style="text-align:left">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-<!--
-<section id="new_entry">
-    <div class="entry_form">
-        <h2>Registo:</h2>
-        <form action="nome do ficheiro de adicionar base dados" method="post">
-            Nome:
-            <input type="text" name="name" />
-            <br />
-            Nome de Utilizador:
-            <input type="text" name="username" />
-            <br />
-            Palavra-passe:
-            <input type="text" name="password" />
-            <br />
-            Imagem:
-            <input type="text" name="img" />
-            <br />
-            <input type="submit" value="Entrar" />
-        </form>
-    </div>
-</section>
--->
+
 <div id="id01" class="modal">
     <form class="modal-content animate" action="action_add_edit_user.php" method="post" enctype="multipart/form-data">
         <div class="imgcontainer">
@@ -68,24 +48,3 @@
         </div>
     </form>
 </div>
-<script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
-</script>
