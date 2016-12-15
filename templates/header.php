@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Restaurant Advisor</title>
-	<meta charset="UTF-8">
 	<meta name="author" name="Diogo Cruz, Luis Barbosa, Rui Araujo" />
 	<meta name="description" content="Restaurants: Yelp like" />
 	<meta name="keywords" content="FEUP, LTW, Restaurants, Food" />
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<header class="banner">
+	<header>
 		<h1>Restaurant Advisor</h1>
 	</header>
 
