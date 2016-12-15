@@ -1,9 +1,3 @@
-﻿<!DOCTYPE html
-          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<link rel="stylesheet" type="text/css" href="css/start_page.css" />
-
 <h1><b>  <?php
           $userId =  $_GET['id'];
         //    echo $userId ;
@@ -24,11 +18,7 @@
  ?>
   </b></h1>
 
-
-
-
-
-<div id="id01" class="modal">
+﻿<div id="id01" class="modal">
     <form class="modal-content animate" action="action_add_edit_user.php" method="post">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -47,13 +37,14 @@
              ?> " name ="name" required=required />
             <label><b>Imagem</b></label>
             <input type="file" placeholder="Enter image" name="image" required="required" />
-            <button type="submit">Alterar</button>
+            <button type="submit" id="button_register">Alterar</button>
         </div>
         <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
     </form>
 </div>
+
 <div id="id02" class="modal">
     <form class="modal-content animate" action="action_add_edit_restaurant.php" method="post">
         <div class="imgcontainer">
@@ -66,7 +57,7 @@
             <input type="password" placeholder="Descricao" ="description" required=required />
             <label><b>Imagem</b></label>
             <input type="text" placeholder="URL da imagem" name="image" required=required />
-            <button type="submit">Adicionar</button>
+            <button type="submit" id="button_register">Adicionar</button>
         </div>
         <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
@@ -75,7 +66,6 @@
 </div>
 <br />
 <input type="text" name="search" placeholder="Search.." />
-
 
 <h2>Utilizador</h2>
 <div class="card">
