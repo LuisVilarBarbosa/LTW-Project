@@ -1,19 +1,19 @@
 <div id="id01" class="modal">
-    <form class="modal-content animate" action="action_add_edit_user.php" method="post">
+    <form class="modal-content animate" action="action_add_edit_user.php" method="post" enctype="multipart/form-data">
         <div class="imgcontainer">
             <span class="close" id="x1" title="Close Modal">&times;</span>
             <img src="<?=$user['image_dir']?>" alt="Avatar" class="avatar" />
         </div>
         <div class="container">
-            <label><b>Username</b></label>
+            <label for="username"><b>Username</b></label>
             <input type="text" name="username" value=<?=$user['name']?> required="required "/>
-            <label><b>Password</b></label>
+            <label for="password"><b>Password</b></label>
             <input type="password" placeholder="New password" name="password" required="required" />
-            <label><b>Nome</b></label>
+            <label for="name"><b>Name</b></label>
             <input type="text" name ="name" value=<?=$user['name']?> required="required" />
-            <label><b>Imagem</b></label>
+            <label for="image"><b>Image</b></label>
             <input type="file" name="image" required="required" />
-            <button type="submit" class="save_button">Alterar</button>
+            <button type="submit" class="save_button">Change</button>
         </div>
         <div class="cancel_container">
 			    <button type="button" class="cancelbtn" id="cancel1">Cancel</button>
@@ -21,7 +21,7 @@
     </form>
 </div>
 <div id="id02" class="modal">
-    <form class="modal-content animate" action="action_add_edit_restaurant.php" method="post">
+    <form class="modal-content animate" action="action_add_edit_restaurant.php" method="post" enctype="multipart/form-data">
         <div class="imgcontainer">
            <span class="close" id="x2" title="Close Modal">&times;</span>
         </div>
