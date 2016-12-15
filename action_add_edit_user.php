@@ -4,12 +4,11 @@
   include('load_image.php');
 
   $name = trim(strip_tags($_POST['name']));
-  $image_dir = load_image($_FILES['image']);
+  $image_dir = load_image($_FILES['image']);  // generates error message if any error occurs and is returned NULL
   $username = trim(strip_tags($_POST['username']));
   $password = $_POST['password'];
 
   if($name == '') array_push($_SESSION['error_messages'], 'A name must be indicated.');
-  if($image_dir == NULL) array_push($_SESSION['error_messages'], 'File is not an image. / An image must be indicated.');
   if($username == '') array_push($_SESSION['error_messages'], 'An username must be indicated.');
   if($password == '') array_push($_SESSION['error_messages'], 'A password must be indicated.');
 
