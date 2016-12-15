@@ -19,7 +19,7 @@
 	</header>
 
 	<!-- Show errors -->
-	<section id="errors">
+	<section class="errors">
 		<?php foreach($error_messages as $error) {?>
 			<p><?=$error?></p>
 			<br />

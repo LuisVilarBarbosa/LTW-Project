@@ -6,9 +6,12 @@ html{
 
 .errors {
 	color:red;
+	/*background-color: white;*/
+    /*padding: 5px 100px 150px 100%;*/
+	margin: auto;
 }
 
-.banner{
+header{
     position: fixed;
     top: 0px;
     left: 0px;
@@ -270,7 +273,6 @@ button {
 .save_button {
     width: 100%;
 }
-
 
 /* Extra styles for the cancel button */
 .cancelbtn {

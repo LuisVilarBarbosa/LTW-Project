@@ -63,8 +63,8 @@
 </div>
 <br />
 
-<button id="edit_user" >Editar Utilizador</button>
-<button id="add_restaurant" >Adicionar Restaurante</button>
+<button id="edit_user">Editar Utilizador</button>
+<button id="add_restaurant">Adicionar Restaurante</button>
 
 <br />
 <br />

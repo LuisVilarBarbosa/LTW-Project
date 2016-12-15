@@ -15,30 +15,29 @@ $(document).ready(function () {
 	
 	$('#button_popup').click(function (){
 		modal.style.display = "block";
-    });
+	});
 	
 	$('#edit_user').click(function (){
 		modal.style.display = "block";
-    });
+	});
 	
 	$('#add_restaurant').click(function (){
 		modal2.style.display = "block";
-    });
+	});
 	
 	$('#x1').click(function (){
 		modal.style.display = "none";
-    });
+	});
 	
 	$('#x2').click(function (){
 		modal2.style.display = "none";
-    });
+	});
 	
-    $('#cancel1').click(function (){
+	$('#cancel1').click(function (){
 		modal.style.display = "none";
-    }); 
+	}); 
 	
 	$('#cancel2').click(function (){
 		modal2.style.display = "none";
-    }); 
-	
+	});
 });
