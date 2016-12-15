@@ -21,7 +21,7 @@
 	<!-- Show errors -->
 	<section id="errors">
 		<?php foreach($error_messages as $error) {?>
-			<label><?=$error?></label>
+			<p><?=$error?></p>
 			<br />
 		<?php } ?>
 	</section>
