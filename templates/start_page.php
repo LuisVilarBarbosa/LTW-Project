@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <link rel="stylesheet" type="text/css" href="css/start_page.css" />
 	</head>
-<!--   <script type="text/javascript" src="../javascript/slideshow.js"></script>  -->
-<button onclick="document.getElementById('id01').style.display='block'">Registar</button>
+<!--   <script type="text/javascript" src="javascript/slideshow.js"></script>  -->
+<button onclick="document.getElementById('id01').style.display='block'" id="button_popup">Registar</button>
 <br />
 <br />
 <div class="slideshow-container">
@@ -68,14 +68,13 @@
             <input type="text" placeholder="Enter Name" name="name" required="required" />
             <label><b>Imagem</b></label>
             <input type="file" placeholder="Enter image" name="image" required="required" />
-            <button type="submit" id="button_popup">Registar</button>
+            <button type="submit" id="button_register">Registar</button>
         </div>
         <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
     </form>
 </div>
-<script src="javascript/slideshow.js"></script>
 <script>
     var slideIndex = 0;
     showSlides();
