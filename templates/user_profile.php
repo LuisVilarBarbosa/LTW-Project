@@ -1,7 +1,7 @@
 <div id="id01" class="modal">
     <form class="modal-content animate" action="action_add_edit_user.php" method="post">
         <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span class="close" id="x1" title="Close Modal">&times;</span>
             <img src="<?=$user['image_dir']?>" alt="Avatar" class="avatar" />
         </div>
         <div class="container">
@@ -23,7 +23,7 @@
 <div id="id02" class="modal">
     <form class="modal-content animate" action="action_add_edit_restaurant.php" method="post">
         <div class="imgcontainer">
-            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span class="close" id="x2" title="Close Modal">&times;</span>
         </div>
         <div class="container">
             <label><b>Name</b></label>

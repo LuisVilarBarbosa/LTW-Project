@@ -49,7 +49,7 @@
 <div id="id01" class="modal">
     <form class="modal-content animate" action="action_add_edit_user.php" method="post" enctype="multipart/form-data">
         <div class="imgcontainer">
-			<span id="cancel1" class="close" title="Close Modal">&times;</span>
+			<span class="close" id="x1" title="Close Modal">&times;</span>
 			<img src="resources/example_user.jpg" alt="Avatar" class="avatar" />
         </div>
         <div class="container">
@@ -61,10 +61,10 @@
             <input type="text" placeholder="Enter Name" name="name" required="required" />
             <label><b>Imagem</b></label>
             <input type="file" placeholder="Enter image" name="image" required="required" />
-            <button type="submit" id="button_register">Registar</button>
+            <button type="submit" class="save_button">Registar</button>
         </div>
         <div class="cancel_container">
-            <button type="button" id="cancel1" class="cancelbtn">Cancel</button>
+            <button type="button" class="cancelbtn" id="cancel1">Cancel</button>
         </div>
     </form>
 </div>

@@ -24,7 +24,15 @@ $(document).ready(function () {
 	$('#add_restaurant').click(function (){
 		modal2.style.display = "block";
     });
-
+	
+	$('#x1').click(function (){
+		modal.style.display = "none";
+    });
+	
+	$('#x2').click(function (){
+		modal2.style.display = "none";
+    });
+	
     $('#cancel1').click(function (){
 		modal.style.display = "none";
     }); 
@@ -32,4 +40,5 @@ $(document).ready(function () {
 	$('#cancel2').click(function (){
 		modal2.style.display = "none";
     }); 
+	
 });
