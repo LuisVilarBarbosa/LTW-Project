@@ -32,4 +32,10 @@
     return $stmt->fetchAll();
   }
 
+  function getRestaurantById($restaurantId) {
+    global $dbh;
+    $stmt = $dbh->prepare('SELECT * FROM restaurants WHERE restaurantId = ?');
+    $stmt->execute(array($restaurantId));
+    return $stmt->fetch();
+  }
 ?>
