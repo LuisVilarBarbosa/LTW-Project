@@ -1,5 +1,6 @@
 <?php
 	include('config/init.php');
+	include('verify_session.php');
 
 	include('templates/header.php');
 	include('templates/restaurant_page.php');

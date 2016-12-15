@@ -1,5 +1,6 @@
 ﻿<?php
   include('config/init.php');
+  include('verify_session.php');
   include('database/restaurant.php');
   include('load_image.php');
 

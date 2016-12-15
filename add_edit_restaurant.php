@@ -1,7 +1,8 @@
 ﻿<?php
   include('config/init.php');
+  include('verify_session.php');
 
-  //include_once('templates/header.php');
-  include_once('templates/add_edit_restaurant.php');
-  //include_once('templates/footer.php');
+  include('templates/header.php');
+  include('templates/add_edit_restaurant.php');
+  include('templates/footer.php');
 ?>
