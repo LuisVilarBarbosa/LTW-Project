@@ -13,10 +13,10 @@
             <input type="text" name ="name" value=<?=$user['name']?> required="required" />
             <label><b>Imagem</b></label>
             <input type="file" name="image" required="required" />
-            <button type="submit">Alterar</button>
+            <button type="submit" class="save_button">Alterar</button>
         </div>
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <div class="cancel_container">
+			<button type="button" class="cancelbtn" id="cancel1">Cancel</button>
         </div>
     </form>
 </div>
@@ -34,10 +34,10 @@
             <input type="text" placeholder="Morada" name="adress" required="required" />
             <label><b>Imagem</b></label>
             <input type="file" name="image" required="required" />  <br/>
-            <button type="submit">Adicionar</button>
+            <button type="submit" class="save_button">Adicionar</button>
         </div>
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <div class="cancel_container">
+			<button type="button" class="cancelbtn" id="cancel2">Cancel</button>
         </div>
     </form>
 </div>

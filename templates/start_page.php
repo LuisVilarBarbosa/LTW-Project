@@ -1,4 +1,4 @@
-<button onclick="document.getElementById('id01').style.display='block'" id="button_popup">Registar</button>
+<button id="button_popup">Registar</button>
 <br />
 <br />
 <div class="slideshow-container">
@@ -49,8 +49,8 @@
 <div id="id01" class="modal">
     <form class="modal-content animate" action="action_add_edit_user.php" method="post" enctype="multipart/form-data">
         <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="resources/example_user.jpg" alt="Avatar" class="avatar" />
+			<span id="cancel1" class="close" title="Close Modal">&times;</span>
+			<img src="resources/example_user.jpg" alt="Avatar" class="avatar" />
         </div>
         <div class="container">
             <label><b>Username</b></label>
@@ -63,8 +63,8 @@
             <input type="file" placeholder="Enter image" name="image" required="required" />
             <button type="submit" id="button_register">Registar</button>
         </div>
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <div class="cancel_container">
+            <button type="button" id="cancel1" class="cancelbtn">Cancel</button>
         </div>
     </form>
 </div>

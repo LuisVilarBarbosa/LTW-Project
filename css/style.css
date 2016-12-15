@@ -4,6 +4,10 @@ html{
      background-image: url("http://www.theredherring.co.za/wp-content/uploads/2013/03/background.jpg"); 
 }
 
+.errors {
+	color:red;
+}
+
 .banner{
     position: fixed;
     top: 0px;
@@ -263,7 +267,7 @@ button {
     margin-left: -20px;
 }
 
-#button_register {
+.save_button {
     width: 100%;
 }
 
@@ -273,6 +277,11 @@ button {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
+}
+
+.cancel_container {
+	background-color:#f1f1f1;
+    padding-left: 16px;
 }
 
 /* Center the image and position the close button */
