@@ -1,25 +1,29 @@
-﻿<section class="temp">
+<?php
 
-	<h1>Nome_restaurante</h1>
+//$restaurant=getRestaurantById($_POST['restaurantId']);
+ ?>
 
-	<h2>Average score </h2>
 
-		<p>Descricao do restaurante</p>
-			<p>imagem do restaurante</p
-					<p>adress restaurante</p>
-						<p>Nome do dono?</p>
+ <nav>
+ 	<ul>
+ 		<li><a href="index.php">Homepage</a></li>
+ 		<li><a href=" header('Location: user_profile.php?id=' . $userId)">Perfil do user </a></li>
+
+ 	</ul>
+ </nav>
+
+<section class="temp">
+
+	<h1><?=$restaurant['name']?></b></h1>
+
+	<img src="$restaurant['image_dir']?>" alt="Image" style="">
+	<p><?=$restaurant['description']?></p>
+	<p>	Average score </p>
 
 </section>
-
-
-<nav>
-	<ul>
-		<li><a href="index.html">Homepage</a></li>
-		<li><a href="about.html">Perfil do user </a></li>
-
-	</ul>
-</nav>
-
+<?php
+		// funcao que vai buscar todas as reviews do restaurante
+ ?>
 
 <section name="new_comment">
 	<form action=" ...................." method="post" enctype="multipart/form-data">
@@ -37,7 +41,15 @@
 </section>
 
 <section name="comments">
+<!--
+	foreach () { ?>
 
+<p><?=$...['comment']?></p>
+<p><?=$...['score']?></p>
+
+
+<?php  } ?>
+-->
 		<h3> Nome do user </h3>
 		<p>Comment</p>
 		<p>score given</p>
