@@ -63,8 +63,8 @@
 </div>
 <br />
 
-<button onclick="document.getElementById('id01').style.display='block'" >Editar Utilizador</button>
-<button onclick="document.getElementById('id02').style.display='block'" >Adicionar Restaurante</button>
+<button id="edit_user" >Editar Utilizador</button>
+<button id="add_restaurant" >Adicionar Restaurante</button>
 
 <br />
 <br />
