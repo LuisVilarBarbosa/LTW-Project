@@ -44,6 +44,7 @@
   }
 
   function getUserById($userId) {
+    global $dbh;
     $stmt = $dbh->prepare('SELECT name, image_dir, username FROM users WHERE userId = ?');
     $stmt->execute(array($userId));
     return $stmt->fetch();
