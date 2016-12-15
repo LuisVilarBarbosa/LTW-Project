@@ -1,24 +1,18 @@
-<h1><b>  <?php
-          $userId =  $_GET['id'];
-        //    echo $userId ;
-        //   $user = array();
-          //$_POST=getUserById($userId);
+﻿<!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<link rel="stylesheet" type="text/css" href="css/start_page.css" />
 
-      // $user = getUsersById($_SESSION['$userId']);
-      // print_r($user]);
-        //echo $user['name'];
-        // print_r('$user['name']'');
-//print_r($firstquarter);
+<?php
 
-  $stmt = $dbh->prepare('SELECT * FROM users WHERE userId = ?');
-  $stmt->execute(array($userId));
-  $user= $stmt->fetch();
-//echo $user['username'];
+//$user = getUserById($_SESSION['userId']);
+//$restaurants=getRestaurantsByOwner($_SESSION['userId']);
+echo $_SESSION['name'];
 
  ?>
-  </b></h1>
 
-﻿<div id="id01" class="modal">
+<div id="id01" class="modal">
     <form class="modal-content animate" action="action_add_edit_user.php" method="post">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -26,9 +20,8 @@
         </div>
         <div class="container">
             <label><b>Username</b></label>
-            <input type="text" placeholder="<?php
-                        echo $user['username'];
-             ?> " name="username" required=required />
+            <input type="text" placeholder="<p><?=$user['name']?></p><?php
+             ?> " name="username" required="required "/>
             <label><b>Password</b></label>
             <input type="password" placeholder="nova password" name="password" required=required />
             <label><b>Nome</b></label>
@@ -37,14 +30,13 @@
              ?> " name ="name" required=required />
             <label><b>Imagem</b></label>
             <input type="file" placeholder="Enter image" name="image" required="required" />
-            <button type="submit" id="button_register">Alterar</button>
+            <button type="submit">Alterar</button>
         </div>
         <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
     </form>
 </div>
-
 <div id="id02" class="modal">
     <form class="modal-content animate" action="action_add_edit_restaurant.php" method="post">
         <div class="imgcontainer">
@@ -57,7 +49,7 @@
             <input type="password" placeholder="Descricao" ="description" required=required />
             <label><b>Imagem</b></label>
             <input type="text" placeholder="URL da imagem" name="image" required=required />
-            <button type="submit" id="button_register">Adicionar</button>
+            <button type="submit">Adicionar</button>
         </div>
         <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
@@ -67,24 +59,35 @@
 <br />
 <input type="text" name="search" placeholder="Search.." />
 
+
 <h2>Utilizador</h2>
 <div class="card">
-    <img src=" <?php
-                echo $user['image_dir'];
-     ?> " alt="Avatar" style="width:100%" />
+    <img src=" somestuff " alt="Avatar" style="width:100%" />
     <div class="container">
 
-        <h3><b> <?php
-                    echo $user['name'];
-         ?>   </b></h3>
-        <p> <?php
+        <h3><b> <?=$user['name']?>
+         </b></h3>
 
-                    echo $user['username'];
-         ?> </p>
+         <h4><b>  <?=$user['username']?>
+         </b></h4>
+
+
+
+
+
     </div>
 </div>
 <br />
+
 <button onclick="document.getElementById('id01').style.display='block'" >Editar Utilizador</button>
 <button onclick="document.getElementById('id02').style.display='block'" >Adicionar Restaurante</button>
+
 <br />
 <br />
+<section>
+    <h2> restaurants <h2>
+
+
+teste
+
+</section>
