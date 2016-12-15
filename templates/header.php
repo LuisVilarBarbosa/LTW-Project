@@ -9,6 +9,7 @@
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="javascript/view_restaurant.js"></script>
     <script type="text/javascript" src="javascript/pop_up.js"></script>
+	<script type="text/javascript" src="javascript/restaurant_search.js"></script>
 	<script type="text/javascript" src="javascript/slideshow.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
@@ -26,7 +27,7 @@
 		<?php } ?>
 	</section>
 
-	<section id="login_logout">
+	<nav>
 		<?php if (!isset($_SESSION['userId'])) { ?>
 			<form action="action_login.php" method="post">
 				<label><b>Username</b></label>
@@ -36,8 +37,11 @@
 				<button type="submit">Login</button>
 			</form>
 		<?php } else { ?>
-			<form action="action_logout.php">
+			<form action="action_logout.php" class="nav_form">
 				<button type="submit">Logout</button>
 			</form>
+			<form action="user_profile.php" class="nav_form">
+				<button value="Profile">Profile</button>
+			</form>
 		<?php } ?>
-	</section>
+	</nav>

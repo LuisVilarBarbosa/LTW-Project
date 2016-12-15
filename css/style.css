@@ -45,13 +45,13 @@ footer{
 }
 
 nav{
-	border: 1px solid black;
-	height: 50px;
-	width: 490px;
-	padding-right: 30px;
-    text-align: -webkit-center;
-	background-color: white;
-	margin: 40px auto;
+	text-align: -webkit-center;
+	margin: 5px;
+}
+
+.nav_form{
+	display: inline;
+    padding-left: 20px;
 }
 
 nav ul{
