@@ -1,5 +1,5 @@
-﻿<footer>
-  <p>Made by: Diogo Cruz, Luis Barbosa, Rui Araujo</p>
-</footer>
+﻿	<footer>
+		<p>Made by: Diogo Cruz, Luis Barbosa, Rui Araujo</p>
+	</footer>
 </body>
 </html>

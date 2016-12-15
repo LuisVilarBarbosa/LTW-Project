@@ -1,9 +1,4 @@
-﻿<!DOCTYPE html
-          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<link rel="stylesheet" type="text/css" href="css/start_page.css" />
-<div id="id01" class="modal">
+﻿<div id="id01" class="modal">
     <form class="modal-content animate" action="action_add_edit_user.php" method="post">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -107,4 +102,3 @@
         }
     }
 </script>
-</html>
