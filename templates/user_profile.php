@@ -2,7 +2,7 @@
     <form class="modal-content animate" action="action_add_edit_user.php" method="post">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="resources/example_user.jpg" alt="Avatar" class="avatar" />
+            <img src="<?=$user['image_dir']?>" alt="Avatar" class="avatar" />
         </div>
         <div class="container">
             <label><b>Username</b></label>
@@ -28,10 +28,12 @@
         <div class="container">
             <label><b>Name</b></label>
             <input type="text" placeholder="Nome do Restaurante" name="name" required="required" />
-            <label><b>Password</b></label>
-            <input type="password" placeholder="Descricao" ="description" required="required" />
+            <label><b>Descrição</b></label>
+            <input type="text" placeholder="Descricao" name="description" required="required" />
+            <label><b>Morada</b></label>
+            <input type="text" placeholder="Morada" name="adress" required="required" />
             <label><b>Imagem</b></label>
-            <input type="text" placeholder="URL da imagem" name="image" required="required" />
+            <input type="file" name="image" required="required" />  <br/>
             <button type="submit">Adicionar</button>
         </div>
         <div class="container" style="background-color:#f1f1f1">
@@ -40,15 +42,23 @@
     </form>
 </div>
 <br />
-<input type="text" name="search" placeholder="Search.." />
 
+<form id="searchbox" action="searchRestaurants(restaurant_name)">
+    <input id="search" type="text" placeholder="Type here"  name="restaurant_name" required="required"/>
+    <input id="button" type="submit" value="Search" />
+</form>
 
 <h2>Utilizador</h2>
 <div class="card">
-    <img src=" somestuff " alt="Avatar" style="width:100%" />
+    <img src=" <?=$user['image_dir']?> " alt="Avatar" style="width:100%" />
     <div class="container">
         <h3><b><?=$user['name']?></b></h3>
          <h4><b><?=$user['username']?></b></h4>
+
+         <php  if(   sizeof($restaurants) != 0){ ?>
+                <p> Owner/reviewer </p>
+
+    <?php}   ?>
     </div>
 </div>
 <br />
@@ -60,4 +70,22 @@
 <br />
 <section>
     <h2>Restaurants<h2>
+
+<?php
+      global $dbh;
+      $stmt = $dbh->prepare('SELECT * FROM restaurants WHERE ownerId = ?');
+      $stmt->execute(array($ownerId));
+      $restaurants= $stmt->fetchAll();
+      // // href ="restaurant_page?restaurantId=". <?=$rest['restaurantId']?>
+ ?>
+
+ <?php
+      foreach ($restaurants as $rest) { ?>
+
+
+    <?php  } ?>
+
+
+
+
 </section>
