@@ -1,7 +1,15 @@
 <?php
   function load_image($image /* from $_FILES */) {
     $target_dir = "uploads/";
-    $target_file = $target_dir . basename($image['name']);
+    $basename = basename($image['name']);
+
+    // Prevent replacing existent files ('move_uploaded_file' replaces files)
+    for ($i = 1; ; $i++) {
+      $temp_basename = $i . '-' . $basename;
+      $target_file = $target_dir . $temp_basename;
+      if(!file_exists($target_file))
+        break;
+    }
 
     // Check if image file is an actual image or fake image
     $check = getimagesize($image['tmp_name']); // $check has image info
