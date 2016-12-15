@@ -11,6 +11,9 @@
   if($name == '') array_push($_SESSION['error_messages'], 'A name must be indicated.');
   if($username == '') array_push($_SESSION['error_messages'], 'An username must be indicated.');
   if($password == '') array_push($_SESSION['error_messages'], 'A password must be indicated.');
+  preg_match('/[0-9a-zA-Z!\\|"@#£%€&\/()[\]=?«»+\-_,;.: ]{8,}/', $password, $matches);
+  if(sizeof($matches) != 1 || $matches[0] != $password)
+    array_push($_SESSION['error_messages'], 'Invalid password. Must have, at least, 8 characters (1-9 a-z A-Z ! \ | " @ # £ % € & / ( ) [ ] = ? « » + - _ , ; . : space ).');
 
   if(sizeof($_SESSION['error_messages']) == 0) {
     try {
