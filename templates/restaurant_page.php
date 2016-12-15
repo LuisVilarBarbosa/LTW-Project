@@ -1,61 +1,46 @@
-﻿<header class="temp">
-	<h1>Restaurant Advisor</h1>
+﻿<section class="temp">
+
 	<h1>Nome_restaurante</h1>
-	<h2>Avaliação: "getAvaliation(Nome_restaurante)" <div class="total_votes">vote data</div></h2>
-	<h4>Categorias: "getCategory(Nome_restaurante)"</h4>
-</header>
+
+	<h2>Average score </h2>
+
+		<p>Descricao do restaurante</p>
+			<p>imagem do restaurante</p
+					<p>adress restaurante</p>
+						<p>Nome do dono?</p>
+
+</section>
+
 
 <nav>
 	<ul>
 		<li><a href="index.html">Homepage</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="contact.html">Contact</a></li>
+		<li><a href="about.html">Perfil do user </a></li>
+
 	</ul>
 </nav>
 
+
 <section name="new_comment">
-	Rate:&ensp;
-	<section id="rating" class="rating">
-		<div class="star_1 ratings_stars"></div>
-		<div class="star_2 ratings_stars"></div>
-		<div class="star_3 ratings_stars"></div>
-		<div class="star_4 ratings_stars"></div>
-		<div class="star_5 ratings_stars"></div>
-	</section><br />
-	<form class="comment" method='post'>
-		Comment:<textarea id='comment'></textarea><br />
-		<input type='hidden' id='restaurantId' value='<? echo $_GET["id"]; ?>' />
-		<input type='submit' value='Submit' />
+	<form action=" ...................." method="post" enctype="multipart/form-data">
+	  <label for="score">Rating: </label>
+	  <input type="number" name="score" value= "score">
+	  <br />
+	  <br />
+	  <label for="comment">Description: </label>
+	  <input type="text" name="comment" value="comment" />
+	  <br />
+	  <br />
+
+	  <input type="submit" name="submit" value="Submit" />
 	</form>
 </section>
 
 <section name="comments">
-	<article>
-		<header>Comentário de getUser()</header>
-		<h2>Melhor restaurante de sempre!</h2>
-		<footer>getPontuacao() 10</footer>
-	</article>
 
-	<article>
-		<header>Comentário de getUser()</header>
-		<h2>Nao gostei!</h2>
-		<footer>getPontuacao() 2</footer>
-	</article>
+		<h3> Nome do user </h3>
+		<p>Comment</p>
+		<p>score given</p>
 
-	<article>
-		<header>Comentário de getUser()</header>
-		<h2>Incrivel!</h2>
-		<footer>getPontuacao() 8</footer>
-	</article>
 
-	<article>
-		<header>Comentário de getUser()</header>
-		<h2>uau</h2>
-		<footer>getPontuacao() 6</footer>
-	</article>
 </section>
-
-<footer>
-	<!--<p>Made by: document.getElementsByTagName("author")</p>-->
-	<p>Made by: Diogo Cruz, Luís Barbosa, Rui Araújo</p>
-</footer>
