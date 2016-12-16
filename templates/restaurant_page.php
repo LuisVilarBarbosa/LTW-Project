@@ -11,8 +11,7 @@
 <h1><?=$restaurant['name']?></b></h1>
 
 
-<img src="$restaurant['image_dir']?>" alt="Image" >
-
+<img src="$restaurant['image_dir']?>" alt="Image" style="">
 <p><?=$restaurant['description']?></p>
 <p><?=$restaurant['address']?></p>
 <p>	Average score  </p>
@@ -48,19 +47,12 @@
 <?php
 		// funcao que vai buscar todas as reviews do restaurante
  ?>
- <section name="comments">
- <!--
- 	foreach () { ?>
 
- <p><?=$...['comment']?></p>
- <p><?=$...['score']?></p>
+<section name="comments">
 
-
- <?php  } ?>
- -->
- 		<h3> Nome do user </h3>
- 		<p>Comment</p>
- 		<p>score given</p>
+		<h3> Nome do user </h3>
+		<p>Comment</p>
+		<p>score given</p>
 
 
- </section>
+</section>
