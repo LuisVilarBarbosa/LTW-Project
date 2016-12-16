@@ -2,19 +2,19 @@
 <br />
 <br />
 <div class="slideshow-container">
-    <div class="mySlides fade">
+    <div class="mySlides_fade">
         <div class="numbertext">1 / 3</div>
-        <img src="resources/img1.jpeg" style="width:100%" />
+        <img src="resources/img1.jpeg"/>
         <div class="text">Tapas da Eira</div>
     </div>
-    <div class="mySlides fade">
+    <div class="mySlides_fade">
         <div class="numbertext">2 / 3</div>
-        <img src="resources/img2.jpg" style="width:100%" />
+        <img src="resources/img2.jpg"/>
         <div class="text">Rio Este</div>
     </div>
-    <div class="mySlides fade">
+    <div class="mySlides_fade">
         <div class="numbertext">3 / 3</div>
-        <img src="resources/img3.jpg" style="width:100%" />
+        <img src="resources/img3.jpg"/>
         <div class="text">Riça</div>
     </div>
 </div>
