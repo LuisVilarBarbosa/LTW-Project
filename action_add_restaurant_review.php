@@ -8,9 +8,6 @@
   $comment = trim(strip_tags($_POST['comment']));
   $score = $_POST['score'];
 
-  if($comment == '')
-    $comment = NULL;
-
   preg_match('/[1-5]/', $score, $matches);
   if(sizeof($matches) != 1 || $matches[0] != $score) array_push($_SESSION['error_messages'], 'The score must be between 1 and 5.');
 

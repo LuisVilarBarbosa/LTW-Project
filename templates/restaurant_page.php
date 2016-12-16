@@ -8,7 +8,7 @@
 </section>
 
 <section name="new_review">
-	<form action="action_add_restaurant_review.php" method="post" enctype="multipart/form-data">
+	<form action="action_add_restaurant_review.php" method="post">
 	  <label for="score">Rating (between 1 and 5):</label>
 	  <input type="number" name="score" value="score" min="1" max="5" required="required">
 	  <br />
@@ -30,14 +30,14 @@
     <p><?=$review['comment']?></p>
 		<p><?=$review['answer']?></p>
 
-		<?php if($user['userId']== $restaurant['ownerId'] ) { ?>
+		<?php if($user['userId'] == $restaurant['ownerId'] ) { ?>
 
-			<form action="action_add_answer.php" method="post" enctype="multipart/form-data">
-
+			<form action="action_add_answer.php" method="post">
 			  <label for="answer">Answer: </label>
-			  <input type="text" name="answer" placeholder="answer" />
-				<input type="hidden" name="id" value="<?=$review['reviewId']?>	">
-			  <input type="submit" name="submit" value="Submit" />
+			  <input type="text" name="answer" placeholder="Answer" />
+				<input type="hidden" name="reviewId" value=<?=$review['reviewId']?>>
+        <input type="hidden" name="restaurantId" value=""<?=$restaurant['restaurantId']?>>
+        <input type="submit" name="submit" value="Submit" />
 			</form>
 		<?php } ?>
 

@@ -8,7 +8,6 @@
 	try {
 		$user = getUserById($_SESSION['userId']);
 		$restaurant = getRestaurantById($_GET['restaurantId']);
-		$restaurants = getRestaurantsByOwner($_SESSION['userId']);
 		$reviews = getRestaurantReviewsByRestaurantId($_GET['restaurantId']);
 		$owner = getUserById($restaurant['ownerId']);
 	} catch(PDOException $e) {
