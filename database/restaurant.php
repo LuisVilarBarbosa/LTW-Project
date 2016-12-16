@@ -25,10 +25,10 @@
     $stmt->execute(array($name, $description, $image_dir, $address, $ownerId, $restaurantId));
   }
 
-  function searchRestaurants($partialName) {
+  function getAllRestaurants() {
     global $dbh;
-    $stmt = $dbh->prepare('SELECT * FROM restaurants WHERE name LIKE ?');
-    $stmt->execute($partialName);
+    $stmt = $dbh->prepare('SELECT * FROM restaurants');
+    $stmt->execute();
     return $stmt->fetchAll();
   }
 
