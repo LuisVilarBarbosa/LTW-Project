@@ -4,7 +4,6 @@ $(document).ready(function () {
 		showSlides();
 
 		function showSlides() {
-			console.log(slideIndex);
 			var i;
 			var slides = document.getElementsByClassName("mySlides_fade");
 			var dots = document.getElementsByClassName("dot");

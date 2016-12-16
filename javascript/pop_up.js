@@ -16,9 +16,7 @@ $(document).ready(function () {
 	$('header').click(function (){	
 		var url = document.URL, 
 		shortUrl=url.substring(0,url.lastIndexOf("/"));
-		console.log(shortUrl);
 		res = shortUrl.concat('/start_page.php');
-		console.log(res);
 		window.location = res;
 	});
 	
