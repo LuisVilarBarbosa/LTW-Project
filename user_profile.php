@@ -7,6 +7,7 @@
 	try {
 		$user = getUserById($_SESSION['userId']);
 		$restaurants = getRestaurantsByOwner($_SESSION['userId']);
+		$allRestaurants = getAllRestaurants();
 	} catch(PDOException $e) {
 		array_push($_SESSION['error_messages'], $e->getMessage());
 	}
