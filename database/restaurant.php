@@ -9,7 +9,7 @@
     global $dbh;
     $stmt = $dbh->prepare('SELECT restaurantId FROM restaurants WHERE name = ? AND description = ? AND image_dir = ? AND address = ? AND ownerId = ?');
     $stmt->execute(array($name, $description, $image_dir, $address, $ownerId));
-    return $stmt->fetch();	// what if there are more than one restaurant with this values?
+    return $stmt->fetch();
   }
 
   function getRestaurantsByOwner($ownerId) {
