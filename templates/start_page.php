@@ -33,15 +33,15 @@
 			<img src="resources/example_user.jpg" alt="Avatar" class="avatar" />
         </div>
         <div class="container">
-            <label><b>Username</b></label>
+            <label for="username"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="username" required="required" />
-            <label><b>Password</b></label>
+            <label for="password"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="password" required="required" />
-            <label><b>Nome</b></label>
+            <label for="name"><b>Name</b></label>
             <input type="text" placeholder="Enter Name" name="name" required="required" />
-            <label><b>Imagem</b></label>
+            <label for="image"><b>Image</b></label>
             <input type="file" placeholder="Enter image" name="image" required="required" />
-            <button type="submit" class="save_button">Registar</button>
+            <button type="submit" class="save_button">Sign up</button>
         </div>
         <div class="cancel_container">
             <button type="button" class="cancelbtn" id="cancel1">Cancel</button>

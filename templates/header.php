@@ -30,9 +30,9 @@
 	<nav>
 		<?php if (!isset($_SESSION['userId'])) { ?>
 			<form action="action_login.php" method="post">
-				<label><b>Username</b></label>
+				<label for="username"><b>Username</b></label>
 				<input type="text" placeholder="Enter username" name="username" required="required" />
-				<label><b>Password</b></label>
+				<label for="password"><b>Password</b></label>
 				<input type="password" placeholder="Enter password" name="password" required="required" />
 				<button type="submit">Login</button>
 			</form>

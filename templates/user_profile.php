@@ -26,13 +26,13 @@
            <span class="close" id="x2" title="Close Modal">&times;</span>
         </div>
         <div class="container">
-            <label><b>Name</b></label>
+            <label for="name"><b>Name</b></label>
             <input type="text" placeholder="Restaurant name" name="name" required="required" />
-            <label><b>Description</b></label>
+            <label for="description"><b>Description</b></label>
             <input type="text" placeholder="Description" name="description" required="required" />
-            <label><b>Address</b></label>
+            <label for="address"><b>Address</b></label>
             <input type="text" placeholder="Address" name="address" required="required" />
-            <label><b>Image</b></label>
+            <label for="image"><b>Image</b></label>
             <input type="file" name="image" required="required" />  <br/>
             <button type="submit" class="save_button">Add</button>
         </div>
@@ -70,7 +70,7 @@
 <section>
     <h2>Restaurants<h2>
       <?php foreach ($restaurants as $restaurant) {
-	$link = "restaurant_page.php?restaurantId=" . $restaurant['restaurantId']; ?>
+	         $link = "restaurant_page.php?restaurantId=" . $restaurant['restaurantId']; ?>
         <a href=<?=$link?>><?=$restaurant['name']?></a>
       <?php  } ?>
 </section>
