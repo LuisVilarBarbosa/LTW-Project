@@ -25,19 +25,19 @@
     function add_edit_restaurant($restaurantId, $name, $description, $image_dir, $address, $ownerId) {
       if ($restaurantId != NULL)
         updateRestaurant($restaurantId, $name, $description, $image_dir, $address, $ownerId);
-      else {
+      else
         createRestaurant($name, $description, $image_dir, $address, $ownerId);
-        $_GET['restaurantId'] = getRestaurantId($name, $description, $image_dir, $address, $ownerId);
-      }
+        
+      return getRestaurantId($name, $description, $image_dir, $address, $ownerId);
     }
 
     try {
       if ($image_url != '')
-        add_edit_restaurant($restaurantId, $name, $description, $image_url, $address, $_SESSION['userId']);
+        $restaurantId = add_edit_restaurant($restaurantId, $name, $description, $image_url, $address, $_SESSION['userId']);
       else if ($image_file['name'] != '') {
         $image_dir = load_image($image_file);  // generates error message if any error occurs and is returned NULL
         if ($image_dir != NULL)
-          add_edit_restaurant($restaurantId, $name, $description, $image_dir, $address, $_SESSION['userId']);
+          $restaurantId = add_edit_restaurant($restaurantId, $name, $description, $image_dir, $address, $_SESSION['userId']);
       }
       else
         array_push($_SESSION['error_messages'], 'Error choosing image type to add restaurant to database.');
@@ -48,6 +48,6 @@
     if (sizeof($_SESSION['error_messages']) != 0)
       header('Location: add_edit_restaurant.php');
     else
-      header('Location: restaurant_page.php?id=' . $_GET['restaurantId']);
+      header('Location: restaurant_page.php?id=' . $restaurantId);
   }
 ?>
