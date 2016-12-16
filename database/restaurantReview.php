@@ -11,4 +11,10 @@
     $stmt->execute(array($restaurantId));
     return $stmt->fetchAll();
   }
+
+  function addRestaurantReviewAnswer($reviewId, $answer) {
+    global $dbh;
+    $stmt = $dbh->prepare('UPDATE restaurantReviews SET answer = ? WHERE reviewId = ?)');
+    $stmt->execute(array($reviewId, $answer));
+  }
 ?>

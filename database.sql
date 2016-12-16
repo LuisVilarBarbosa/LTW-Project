@@ -15,10 +15,11 @@ CREATE TABLE users(
 	password	TEXT	NOT NULL);
 
 CREATE TABLE restaurantReviews(
-	commentId	INTEGER	PRIMARY KEY AUTOINCREMENT,
+	reviewId	INTEGER	PRIMARY KEY AUTOINCREMENT,
 	userId		TEXT	NOT NULL,
 	restaurantId	TEXT	NOT NULL,
 	comment		TEXT,
 	score		INTEGER	NOT NULL,
+	answer		TEXT,
 	FOREIGN KEY(userId) REFERENCES User(userId),
 	FOREIGN KEY(restaurantId) REFERENCES Restaurant(restaurantId));
