@@ -15,6 +15,6 @@
   function addRestaurantReviewAnswer($reviewId, $answer) {
     global $dbh;
     $stmt = $dbh->prepare('UPDATE restaurantReviews SET answer = ? WHERE reviewId = ?');
-    $stmt->execute(array($reviewId, $answer));
+    $stmt->execute(array($answer, $reviewId));
   }
 ?>
