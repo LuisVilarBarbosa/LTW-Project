@@ -9,7 +9,6 @@
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="javascript/view_restaurant.js"></script>
     <script type="text/javascript" src="javascript/pop_up.js"></script>
-	<script type="text/javascript" src="javascript/restaurant_search.js"></script>
 	<script type="text/javascript" src="javascript/slideshow.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
@@ -35,6 +34,7 @@
 				<label for="password"><b>Password</b></label>
 				<input type="password" placeholder="Enter password" name="password" required="required" />
 				<button type="submit">Login</button>
+				<button id="button_popup">Sign up</button>
 			</form>
 		<?php } else { ?>
 			<form action="action_logout.php" class="nav_form">

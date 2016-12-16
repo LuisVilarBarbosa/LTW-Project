@@ -1,4 +1,3 @@
-<button id="button_popup">Registar</button>
 <br />
 <br />
 <div class="slideshow-container">
