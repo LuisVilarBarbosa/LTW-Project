@@ -1,5 +1,5 @@
 <section class="restaurant_info">
-	<h1><?=$restaurant['name']?></b></h1>
+	<h1><b><?=$restaurant['name']?></b></h1>
 	<img src=<?=$restaurant['image_dir']?> alt="Image" style="">
 	<p>Description: <?=$restaurant['description']?></p>
 	<p>Address: <?=$restaurant['address']?></p>
