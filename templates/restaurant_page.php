@@ -31,11 +31,11 @@
 
 <section name="new_comment">
 	<form action="action_add_restaurant_review.php" method="post" enctype="multipart/form-data">
-	  <label for="score">Rating: </label>
+	  <label for="">Rating: </label>
 	  <input type="number" name="score" value= "score">
 	  <br />
 	  <br />
-	  <label for="comment">Description: </label>
+	  <label for="">Description: </label>
 	  <input type="text" name="comment" value="comment" />
 	  <br />
 	  <br />
@@ -44,15 +44,13 @@
 	</form>
 </section>
 
-<?php
-		// funcao que vai buscar todas as reviews do restaurante
- ?>
 
 <section name="comments">
 
-		<h3> Nome do user </h3>
-		<p>Comment</p>
-		<p>score given</p>
+  <?php foreach ($comments as $review) { ?>
+    <p><?=$review['score']?></p>
+    <p><?=$review['comment']?></p>
+  <?php  } ?>
 
 
 </section>
