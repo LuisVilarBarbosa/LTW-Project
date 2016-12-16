@@ -21,25 +21,7 @@
     </form>
 </div>
 <div id="id02" class="modal">
-    <form class="modal-content animate" action="action_add_edit_restaurant.php" method="post" enctype="multipart/form-data">
-        <div class="imgcontainer">
-           <span class="close" id="x2" title="Close Modal">&times;</span>
-        </div>
-        <div class="container">
-            <label for="name"><b>Name</b></label>
-            <input type="text" placeholder="Restaurant name" name="name" required="required" />
-            <label for="description"><b>Description</b></label>
-            <input type="text" placeholder="Description" name="description" required="required" />
-            <label for="address"><b>Address</b></label>
-            <input type="text" placeholder="Address" name="address" required="required" />
-            <label for="image"><b>Image</b></label>
-            <input type="file" name="image" required="required" />  <br/>
-            <button type="submit" class="save_button">Add</button>
-        </div>
-        <div class="cancel_container">
-			<button type="button" class="cancelbtn" id="cancel2">Cancel</button>
-        </div>
-    </form>
+    <?php include('templates/add_edit_restaurant.php'); ?>
 </div>
 <br />
 
