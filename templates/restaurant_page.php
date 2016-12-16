@@ -1,11 +1,5 @@
 
 
- <nav>
-	 <?php
-   $link = "user_profile.php?userId=" . $userId['userId']; ?>
-         <a href=<?=$link?>>Voltar ao Perfil</a>
- </nav>
-
 <section class="temp">
 
 <h1><?=$restaurant['name']?></b></h1>
@@ -19,24 +13,14 @@
 
 </section>
 
-<!--
-<nav>
-	<ul>
-		<li><a href="index.html">Homepage</a></li>
-		<li><a href="about.html">Perfil do user </a></li>
-
-	</ul>
-</nav>
--->
-
 <section name="new_comment">
 	<form action="action_add_restaurant_review.php" method="post" enctype="multipart/form-data">
-	  <label for="">Rating: </label>
-	  <input type="number" name="score" value= "score">
+	  <label for="">Rating:(between 0 and 5) </label>
+	  <input type="number" name="score" value= "score"min="0" max="5">
 	  <br />
 	  <br />
-	  <label for="">Description: </label>
-	  <input type="text" name="comment" value="comment" />
+	  <label for="">Comment: </label>
+	  <input type="text" name="comment" placeholder="comment" />
 	  <br />
 	  <br />
 
