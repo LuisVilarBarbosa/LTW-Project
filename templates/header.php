@@ -15,7 +15,9 @@
 
 <body>
 	<header>
-		<h1>Restaurant Advisor</h1>
+		<form action="start_page.php">
+			<h1>Restaurant Advisor</h1>
+		</form>
 	</header>
 
 	<!-- Show errors -->
@@ -34,8 +36,8 @@
 				<label for="password"><b>Password</b></label>
 				<input type="password" placeholder="Enter password" name="password" required="required" />
 				<button type="submit">Login</button>
-				<button id="button_popup">Sign up</button>
 			</form>
+			<button id="button_popup">Sign up</button>
 		<?php } else { ?>
 			<form action="action_logout.php" class="nav_form">
 				<button type="submit">Logout</button>
