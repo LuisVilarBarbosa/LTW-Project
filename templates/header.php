@@ -6,7 +6,7 @@
 	<meta name="author" name="Diogo Cruz, Luis Barbosa, Rui Araujo" />
 	<meta name="description" content="Restaurants: Yelp like" />
 	<meta name="keywords" content="FEUP, LTW, Restaurants, Food" />
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="javascript/view_restaurant.js"></script>
     <script type="text/javascript" src="javascript/pop_up.js"></script>
 	<script type="text/javascript" src="javascript/slideshow.js"></script>
