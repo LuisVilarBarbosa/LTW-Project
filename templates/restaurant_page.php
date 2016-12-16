@@ -4,19 +4,20 @@
 	<p>Description: <?=$restaurant['description']?></p>
 	<p>Address: <?=$restaurant['address']?></p>
 	<p>Average score: <?=$avgScore?></p>
-	<p>Owner: <?=$owner?></p>
+	<p>Owner: <?=$owner['name']?></p>
 </section>
 
 <section name="new_review">
 	<form action="action_add_restaurant_review.php" method="post">
 	  <label for="score">Rating (between 1 and 5):</label>
-	  <input type="number" name="score" value="score" min="1" max="5" required="required">
+	  <input type="number" name="score" value="5" min="1" max="5" required="required" />
 	  <br />
 	  <br />
 	  <label for="comment">Comment: </label>
-	  <input type="text" name="comment" placeholder="comment" />
+	  <input type="text" name="comment" placeholder="Comment" />
 	  <br />
 	  <br />
+		<input type="hidden" name="restaurantId" value=<?=$restaurant['restaurantId']?> />
 	  <input type="submit" name="submit" value="Submit" />
 	</form>
 </section>

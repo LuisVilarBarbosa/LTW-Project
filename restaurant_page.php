@@ -17,7 +17,11 @@
 	$sum = 0;
 	foreach($comments as $comment)
 		$sum += $comment['score'];
-	$avgScore = $sum / sizeof($comments);
+	$size = sizeof($comments);
+	if(size == 0)
+		$avgScore = $sum;
+	else
+		$avgScore = $sum / $size;
 
 	include('templates/header.php');
 	include('templates/restaurant_page.php');

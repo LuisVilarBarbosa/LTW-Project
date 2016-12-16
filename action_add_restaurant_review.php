@@ -4,7 +4,7 @@
   include('database/restaurantReview.php');
 
   $userId = $_SESSION['userId'];
-  $restaurantId = $_GET['restaurantId']);
+  $restaurantId = $_POST['restaurantId'];
   $comment = trim(strip_tags($_POST['comment']));
   $score = $_POST['score'];
 
