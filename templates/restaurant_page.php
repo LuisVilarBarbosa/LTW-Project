@@ -1,6 +1,6 @@
 <section class="restaurant_info">
 	<h1><b><?=$restaurant['name']?></b></h1>
-	<img src=<?=$restaurant['image_dir']?> alt="Image" style="">
+	<img src=<?=$restaurant['image_dir']?> alt="Image" style="" />
 	<p>Description: <?=$restaurant['description']?></p>
 	<p>Address: <?=$restaurant['address']?></p>
 	<p>Average score: <?=$avgScore?></p>
@@ -22,24 +22,22 @@
 	</form>
 </section>
 
- <!-- falta permite ao dono (apenas) escrever uma única resposta a cada review
- 			e as reviews apresentarem a resposta do dono, se existir.-->
-
 <section name="comments">
   <?php foreach ($reviews as $review) { ?>
-    <p><?=$review['score']?></p>
-    <p><?=$review['comment']?></p>
-		<p><?=$review['answer']?></p>
+    <p>Score: <?=$review['score']?></p>
+    <p>Comment: <?=$review['comment']?></p>
 
-		<?php if($user['userId'] == $restaurant['ownerId'] ) { ?>
+		<?php if($_SESSION['userId'] == $restaurant['ownerId'] && $review['answer'] == '') { ?>
 
 			<form action="action_add_answer.php" method="post">
 			  <label for="answer">Answer: </label>
 			  <input type="text" name="answer" placeholder="Answer" />
-				<input type="hidden" name="reviewId" value=<?=$review['reviewId']?>>
-        <input type="hidden" name="restaurantId" value=""<?=$restaurant['restaurantId']?>>
+				<input type="hidden" name="reviewId" value=<?=$review['reviewId']?> />
+        <input type="hidden" name="restaurantId" value=<?=$restaurant['restaurantId']?> />
         <input type="submit" name="submit" value="Submit" />
 			</form>
+		<?php } else { ?>
+			<p>Answer: <?=$review['answer']?></p>
 		<?php } ?>
 
   <?php  } ?>

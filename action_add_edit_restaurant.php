@@ -27,7 +27,7 @@
         updateRestaurant($restaurantId, $name, $description, $image_dir, $address, $ownerId);
       else
         createRestaurant($name, $description, $image_dir, $address, $ownerId);
-        
+
       return getRestaurantId($name, $description, $image_dir, $address, $ownerId);
     }
 
@@ -48,6 +48,6 @@
     if (sizeof($_SESSION['error_messages']) != 0)
       header('Location: add_edit_restaurant.php');
     else
-      header('Location: restaurant_page.php?id=' . $restaurantId);
+      header('Location: restaurant_page.php?restaurantId=' . $restaurantId);
   }
 ?>

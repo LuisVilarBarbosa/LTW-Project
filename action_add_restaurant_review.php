@@ -19,5 +19,5 @@
     }
   }
 
-  header('Location: restaurant_page.php?id=' . $restaurantId);
+  header('Location: restaurant_page.php?restaurantId=' . $restaurantId);
 ?>
